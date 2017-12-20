@@ -1,10 +1,13 @@
 <template>
   <div>
-   <header class="header">
-    <div class="back iconfont">&#xe624;</i></div>
-    <div class="search"><a href="#" class="prompt">输入城市/景点/游玩主题</a></div>
-    <div class="city">城市</div>
-  </header>
+    <header class="header">
+      <div class="back iconfont">&#xe624;</i></div>
+        <div class="search">
+          <router-link to="/search" class="prompt">输入城市/景点/游玩主题</router-link>
+        </div>
+      <div class="city">城市</div>
+    </header>
+
    <swiper :options="swiperOption">
      <swiper-slide v-for="item in swiperInfo" :key="item.id">
        <div class="swiper-img-container">
@@ -144,7 +147,7 @@
     background: #fff;
     border-radius: .1rem;
   }
-   .prompt {
+  .prompt {
     font-size: 0.26rem;color: #ccc;line-height: 0.6rem;
   }
   .city{
